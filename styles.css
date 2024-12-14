@@ -1,0 +1,62 @@
+@font-face {
+    font-family: Pixelated;
+    src: url(/Tiny5-Regular.ttf);
+}
+
+*{
+    font-family: Pixelated;
+}
+
+.device-container{
+ border: 1px solid green;   
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.device-button{
+    border: 1px solid gray;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+}
+
+.device-buttons-container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.device-plastic{
+    border: 1px solid teal;
+    height: 230px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    border-radius: 90px;
+    background-color: teal;
+}
+
+.device-screen{
+    border: 1px solid orange;
+    width: 128px;
+    height: 128px;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid blue
+}
+
+.logo{
+    border: 2px solid red;
+}
+
