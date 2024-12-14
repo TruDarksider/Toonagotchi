@@ -48,6 +48,7 @@
     height: 128px;
     background-color: orange;
     border-radius: 10px;
+    display: flex;
 }
 
 .header-container{
@@ -60,3 +61,29 @@
     border: 2px solid red;
 }
 
+.pixel-container{
+    margin: 0;
+    padding: 0;
+}
+
+.pixel{
+    height: 4px;
+    width: 4px;    
+}
+
+.odd{
+    background-color: gray;
+}
+
+.even{
+    background-color: gray;
+}
+
+.tune-pixel{
+    background-color: brown;
+}
+
+.tune-pixel-list{
+    display: flex;
+    gap: 25px;
+}
