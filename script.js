@@ -14,6 +14,8 @@ const duckCursor = ['pixel249','pixel217','pixel185','pixel153'];
 let cursorLocation = 'food';
 let okayToBlink = false;
 let okayToMakeStinky = true;
+let isTuneClean = true;
+let isFoodOnScreen = false;
 const stinkyLocation = ['pixel56','pixel88','pixel152','pixel120','pixel87','pixel119','pixel184','pixel151','pixel118','pixel52','pixel19','pixel50','pixel181','pixel212','pixel179','pixel210','pixel177','pixel17']
 const fullFoodLocation = ['pixel792','pixel824','pixel888','pixel952','pixel856','pixel920','pixel887','pixel886','pixel855','pixel854','pixel982','pixel949','pixel789','pixel758','pixel851','pixel883','pixel820','pixel916','pixel983','pixel984','pixel759','pixel760'];
 const halfFoodLocation= ['pixel883','pixel884','pixel885','pixel886','pixel887','pixel888','pixel920','pixel952','pixel984','pixel983','pixel982','pixel949','pixel916']
@@ -179,6 +181,7 @@ function moveCursor(){
 }
 
 function feedTune(){
+    isFoodOnScreen = true;
     fullFoodLocation.forEach(pixel => {
         let pixelEl = document.querySelector('#'+pixel);
         pixelEl.style.backgroundColor = 'black';
@@ -199,6 +202,7 @@ function feedTune(){
             let pixelEl = document.querySelector('#'+pixel);
             pixelEl.style.backgroundColor = 'orange';
         });
+        isFoodOnScreen = false;
     }, 10000);
 }
 
@@ -213,28 +217,34 @@ function sleepTune(){
 }
 
 function cleanTune(){
-    stinkyLocation.forEach(pixel => {
-        let pixelEl = document.querySelector('#'+pixel);
-        pixelEl.style.backgroundColor = 'orange';
-    });
-    happyTuneEyes();
-    setTimeout(()=>{createStinky();},45000);
+    if(!isTuneClean){
+        stinkyLocation.forEach(pixel => {
+            let pixelEl = document.querySelector('#'+pixel);
+            pixelEl.style.backgroundColor = 'orange';
+        });
+        happyTuneEyes();
+        isTuneClean = true;
+        setTimeout(()=>{createStinky();}, 45000);
+    }
 }
 
 //TIMER INITIATED METHODS
 function createStinky(){
-    sadTuneEyes();
-    stinkyLocation.forEach(pixel => {
-        let pixelEl = document.querySelector('#'+pixel);
-        pixelEl.style.backgroundColor = 'black';
-    });
+    if(isTuneClean){
+        sadTuneEyes();
+        isTuneClean = false;
+        stinkyLocation.forEach(pixel => {
+            let pixelEl = document.querySelector('#'+pixel);
+            pixelEl.style.backgroundColor = 'black';
+        });
+    }
 }
 
 //HELPER METHODS
 function handleCursorAction(){
     switch(cursorLocation){
         case 'food':
-            feedTune();
+            if(!isFoodOnScreen){feedTune();}
             break;
         case 'light':
             sleepTune();
