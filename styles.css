@@ -8,8 +8,8 @@
 }
 
 body{
-    /* background-image: url('background.jpg'); */
-    background-color: gold;
+    background-image: url('background.jpg');
+    /* background-color: gold; */
 }
 
 .device-container{  
