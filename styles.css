@@ -7,6 +7,10 @@
     font-family: Pixelated;
 }
 
+body{
+    background-color: gold;
+}
+
 .device-container{
  border: 1px solid green;   
  display: flex;
@@ -15,21 +19,22 @@
 }
 
 .device-button{
-    border: 1px solid gray;
+    border: 1px solid white;
     width: 20px;
     height: 20px;
     background-color: gray;
+    border-radius: 10px;
 }
 
 .device-buttons-container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
 }
 
 .device-plastic{
-    border: 1px solid teal;
+    border: 2px solid rgb(1, 75, 75);
     height: 230px;
     width: 200px;
     display: flex;
@@ -57,6 +62,10 @@
     border: 1px solid blue
 }
 
+.icon-pixel{
+    background-color: black;
+}
+
 .logo{
     border: 2px solid red;
 }
@@ -77,6 +86,10 @@
 
 .even{
     background-color: gray;
+}
+
+.screen-edge{
+    background-color: lightgray;
 }
 
 .tune-pixel{
