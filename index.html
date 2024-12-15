@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Tune-agotchi</title>
+    <title>Tamagotchi</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="header-container">
-        <h1 class="logo">Tune-agotchi</h1>
+        <h1 class="logo">Tamagotchi</h1>
     </div>
     <div class="device-container">
         <div class="device-plastic">
@@ -22,12 +22,18 @@
             </div>
         </div>
     </div>
-    <div class="button-container">
+    <div id="quick-start">
+        <span>First button moves cursor</span>
+        <span>Second button selects action</span>
+        <span>Third button is for style</span>
+    </div>
+    <!-- FOR DEVELOPEMENT HELP
+        <div class="button-container">
         <button id="load-tune" onclick=loadTune()>Load Default Tune</button>
     </div>
     <div>
         <p>Tune Pixels:</p>
         <div id="tune-pixel-list"></div>
-    </div>
+    </div> -->
 </body>
 </html>
