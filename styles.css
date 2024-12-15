@@ -46,7 +46,6 @@ body{
 }
 
 .device-screen{
-    border: 1px solid orange;
     width: 128px;
     height: 128px;
     background-color: orange;
@@ -76,6 +75,19 @@ body{
 .pixel{
     height: 4px;
     width: 4px;    
+}
+
+#pixel1{
+    border-top-left-radius: 10px;
+}
+#pixel993{
+    border-top-right-radius: 10px;
+}
+#pixel1024{
+    border-bottom-right-radius: 10px;
+}
+#pixel32{
+    border-bottom-left-radius: 10px;
 }
 
 #quick-start{
