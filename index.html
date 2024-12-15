@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
     <title>Tune-agotchi</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="/script.js" defer></script>
 </head>
 <body>
@@ -15,9 +16,9 @@
         <div class="device-plastic">
             <div class="device-screen"></div>
             <div class="device-buttons-container">
-                <div class="device-button"></div>
-                <div class="device-button"></div>
-                <div class="device-button"></div>
+                <div class="device-button" id="left-button" onclick=moveCursor()></div>
+                <div class="device-button" id="middle-button" onclick=handleCursorAction()></div>
+                <div class="device-button" id="right-button"></div>
             </div>
         </div>
     </div>
